@@ -1,7 +1,12 @@
-<router-outlet />
 <main>
   <div class="container">
-    <h1>Hola mundo</h1>
+    <section class="d-flex flex-row mt-4">
+      <h3 class="w-50">Lista de Usuarios</h3>
+      <div class="input-group mb-3 w-50">
+        <span class="input-group-text" id="inputGroup-sizing-default">Buscar usuario</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" (input)="inputFieldText($event)" aria-describedby="inputGroup-sizing-default">
+      </div>
+    </section>
     <table class="table">
       <thead>
         <tr>

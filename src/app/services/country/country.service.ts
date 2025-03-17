@@ -1,18 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { countryItem } from '../../types/country';
+import { countryItem, getCountryListResponse } from '../../types/country';
 
 type isoCodeTypeParam = { isoCode: string }
 type getCountriesParamsType = { page: number; perPage: number; }
-type getCountryListResponse = [
-  {
-    page: number;
-    pages: number;
-    per_page: string;
-    total: number
-  },
-  countryItem[]
-]
 
 @Injectable({
   providedIn: 'root'

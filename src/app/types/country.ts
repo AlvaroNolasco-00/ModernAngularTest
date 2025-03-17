@@ -26,3 +26,14 @@ export type countryItem = {
   "longitude": string;
   "latitude": string;
 }
+
+
+export type getCountryListResponse = [
+  {
+    page: number;
+    pages: number;
+    per_page: string;
+    total: number
+  },
+  countryItem[]
+]
