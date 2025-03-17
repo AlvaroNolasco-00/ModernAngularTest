@@ -20,12 +20,12 @@
       <tbody>
         @for (user of userList(); track $index) {
         <tr>
-          <td><app-user-avatar [name]="user.first_name + ' ' + user.last_name"></app-user-avatar>{{user.first_name + ' '
+          <td [appHighlight]="'red'"><app-user-avatar [name]="user.first_name + ' ' + user.last_name"></app-user-avatar>{{user.first_name + ' '
             + user.last_name}}</td>
-          <td>{{ user.email }}</td>
-          <td><app-flag [countryIso]="user.country"></app-flag>{{ user.countryItem?.name }}</td>
-          <td>{{ user.phone | prefixPhone:user.country }}</td>
-          <td><a [href]="user.website" _blank>Website</a></td>
+          <td [appHighlight]="'red'">{{ user.email }}</td>
+          <td [appHighlight]="'red'"><app-flag [countryIso]="user.country"></app-flag>{{ user.countryItem?.name }}</td>
+          <td [appHighlight]="'red'">{{ user.phone | prefixPhone:user.country }}</td>
+          <td [appHighlight]="'red'"><a [href]="user.website" _blank>Website</a></td>
         </tr>
         }
       </tbody>

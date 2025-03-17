@@ -8,10 +8,11 @@ import { FlagComponent } from './shareds/flag/flag.component';
 import { BehaviorSubject, catchError, debounceTime, distinctUntilChanged, filter, map, Observable, of, Subscription, switchMap } from 'rxjs';
 import { PrefixPhonePipe } from './pipes/prefix-phone/prefix-phone.pipe';
 import { countryItem, getCountryListResponse } from './types/country';
+import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UserAvatarComponent, FlagComponent, PrefixPhonePipe],
+  imports: [UserAvatarComponent, FlagComponent, PrefixPhonePipe, HighlightDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
